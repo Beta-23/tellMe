@@ -21,3 +21,11 @@ body {
 	background-position: left center;
 	background-repeat: no-repeat;
 }
+
+/* Media Query: For tablet or smaller divices */
+@media screen and (max-width: 1000px) {
+	.container {
+		background-position: center center;
+		background-size: cover;
+	}
+}
