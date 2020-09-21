@@ -99,17 +99,28 @@ const VoiceRSS = {
 	}
 };
 
-function test () {
-	VoiceRSS.speech({
-		key: '',
-		src: 'Test, 1,2,3, Test, Test!',
-		hl: 'en-us',
-		v: 'Linda',
-		r: 0,
-		c: 'mp3',
-		f: '44khz_16bit_stereo',
-		ssml: false
-	});
-}
+// function test () {
+// 	VoiceRSS.speech({
+// 		key: '',
+// 		src: 'Test, 1,2,3, Test, Test!',
+// 		hl: 'en-us',
+// 		v: 'Linda',
+// 		r: 0,
+// 		c: 'mp3',
+// 		f: '44khz_16bit_stereo',
+// 		ssml: false
+// 	});
+// }
 
-test();
+// test();
+
+// Get jokes from Jokes api
+async function getJokes () {
+	try {
+		something;
+	} catch (error) {
+		//catch errors
+		console.log('whoops..getJokes API', error);
+	}
+}
+getJokes();
