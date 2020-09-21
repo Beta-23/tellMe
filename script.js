@@ -1,4 +1,5 @@
 // VoiceRSS Javascript SDK
+const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');
 const VoiceRSS = {
 	speech: function (e) {
@@ -100,7 +101,7 @@ const VoiceRSS = {
 
 function test () {
 	VoiceRSS.speech({
-		key: '<key>',
+		key: '',
 		src: 'Test, 1,2,3, Test, Test!',
 		hl: 'en-us',
 		v: 'Linda',
