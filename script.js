@@ -1,6 +1,7 @@
 // VoiceRSS Javascript SDK
 const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');
+// VoiceRSS JS SDK
 const VoiceRSS = {
 	speech: function (e) {
 		this._validate(e), this._request(e);
@@ -99,6 +100,10 @@ const VoiceRSS = {
 	}
 };
 
+// Disable and Enable button
+function toggleButton () {
+	button.disabled = !button.disabled;
+}
 // Pass Joke to the VoiceRSS API
 function tellMe (joke) {
 	console.log('tellMe is running...', joke);
@@ -126,10 +131,16 @@ async function getJokes () {
 		else {
 			joke = data.joke;
 		}
+		// Text to Speech
 		tellMe(joke);
+
+		// Disable Button
+		toggleButton();
 	} catch (error) {
 		//catch errors
 		console.log('whoops..getJokes API', error);
 	}
 }
-getJokes();
+// Event listeners for buttons
+button.addEventListener('click', getJokes);
+audioElement.addEventListener('ended', toggleButton);
